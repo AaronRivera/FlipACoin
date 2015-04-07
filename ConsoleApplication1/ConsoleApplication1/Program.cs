@@ -26,7 +26,21 @@ namespace ConsoleApplication1
             //At the end it displays the number of tails and heads that were genarated
             Console.WriteLine("Number of heads : " + headsCounter);
             Console.WriteLine("Number of tails : " + tailCounter);
+            Console.WriteLine("it took : " + FlipForHeads() + " times to get a head");
+
             Console.ReadKey();
+        }
+
+        public static int FlipForHeads()
+        {
+            int counter = 0;
+            while (rnd.Next(2) != 0)
+            {
+                counter++;
+            }
+            
+
+            return counter;
         }
 
         public static string FlipACoin()
